@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context  docBase="techquiz" path="/">
+    Specify a JDBC datasource
+    <Resource name="jdbc/javaTechDataSource-ds" auth="Container"
+        type="javax.sql.DataSource" username="root" password="root"
+        driverClassName="com.mysql.cj.jdbc.Driver"
+        url="jdbc:mysql://localhost:3306/technohunk100"
+        maxActive="100" maxIdle="30" />
+        <Resources cachingAllowed="true" cacheMaxSize="100000" />
+</Context>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+<title>Regarding online test link</title>
+<style>
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<p style="width: 70%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+Hello  $emailMessageVO.name<br/><br/>
+<b style="background-color: #e0d4d4;">Below is your test summary  of  online test:-</b><br/>
+</p>	
+<hr/>
+<img src="cid:cimage" style="height: 150px;"/>
+<p style="width: 85%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+  Name : $emailMessageVO.name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Userid : $userOnlineExamStatus.userId &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tech Name : $userOnlineExamStatus.techName &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Test Name : $userOnlineExamStatus.testName &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Test Duration : NA minutes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+ <table border="1" style="width:85%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+		<tr style="background-color: #1e2a7b;color:white;">
+			<td>&nbsp;Questions Attempted</td>
+					<td>&nbsp;Correct Questions</td>
+					<td>&nbsp;Wrong Questions</td>
+					<td>&nbsp;Not Attempted Questions</td>
+					<td>&nbsp;Total Questions</td>
+				<td>&nbsp;Scored%</td>
+					<td>&nbsp;Status</td>
+		</tr>
+		<tr>
+		<td>&nbsp;$userOnlineExamStatus.totalNoAnsweredQuestion</td>
+					<td align="center">&nbsp;$userOnlineExamStatus.totalCorrectAnswer</td>
+					<td>&nbsp;$userOnlineExamStatus.totalWrongAnswer</td>
+					<td>&nbsp;$notAttemptedQuestions</td>
+					<td>&nbsp;$userOnlineExamStatus.totalMarks</td>
+				<td>&nbsp;$calucatedSecureMarkPer</td>
+					<td>&nbsp;$userOnlineExamStatus.examStatus</td>
+		</tr>
+		<tr>
+		<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+		</tr>
+		
+		<tr>
+			<td colspan="7" style="background-color: #a1ff9a;color:white;">&nbsp;</td>
+		</tr>
+</table> 
+    
+<p style="width: 70%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+<br/>
+Please feel free to reach use in case of any question or query.
+<br/>
+Thanks & Regards,<br/>
+<b>JavaHunk  Tech Test Admin</b>
+<br/>
+<img src="cid:image"/>
+</p>
+</body>
+</html>

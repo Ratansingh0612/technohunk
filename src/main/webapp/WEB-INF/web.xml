@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>Technical Assessment System</display-name>
+	<context-param>
+		<param-name>allowPages</param-name>
+		<param-value>action/add-consultant-admin,action/consultant/registration,action/java-full-stack-developer,action/soap-web-service-notes,action/important-interview-question-answer,action/guest-all-tech-test-history,MTID,action/register-news-letter,action/oauth,action/dimage,action/thome,action/imageByUserId,favicon.ico,cgi-sys/defaultwebpage.cgi,action/login,action/tdchart,action/test-result-summary,successStatus.jsp,login.jsp,index.jsp,home.jsp,action/userRegistration,action/showLoginPage,action/add-guest-user,action/tech-test/start,action/codings/problem/start,action/guest-tech-test-history,action/guest-tech-test-details,action/test-time-out</param-value>
+	</context-param>
+	<context-param>
+		<param-name>adminemail</param-name>
+		<param-value>javahunk2020@gmail.com</param-value>
+	</context-param>
+	<context-param>
+		<param-name>adminpassword</param-name>
+		<param-value>admin</param-value>
+	</context-param>
+	<context-param>
+		<param-name>adminlogin</param-name>
+		<param-value>admin</param-value>
+	</context-param>
+	<context-param>
+		<param-name>adminmobile</param-name>
+		<param-value>988987</param-value>
+	</context-param>
+	<filter>
+		<filter-name>testLinkVerification</filter-name>
+		<filter-class>com.synergisitic.it.filter.TestLinkVerificationFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>onlineTechFilter</filter-name>
+		<filter-class>com.synergisitic.it.filter.OnlineTechFilter</filter-class>
+	</filter>
+
+    <filter-mapping>
+		<filter-name>onlineTechFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping> 
+
+	<filter-mapping>
+		<filter-name>testLinkVerification</filter-name>
+		<url-pattern>/MTID/*</url-pattern>
+	</filter-mapping>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:online_application_context.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.synergisitic.it.listener.CreateDefaultUserListener</listener-class>
+	</listener>
+	
+	<servlet>
+		<servlet-name>online-tech</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>throwExceptionIfNoHandlerFound</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>online-tech</servlet-name>
+		<url-pattern>/action/*</url-pattern>
+	</servlet-mapping>
+	
+		<servlet-mapping>
+		<servlet-name>online-tech</servlet-name>
+		<url-pattern>/assessment/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>online-tech-report</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>online-tech-report</servlet-name>
+		<url-pattern>/report/*</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>home.jsp</welcome-file>
+	</welcome-file-list>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/404.jsp</location>
+	</error-page>
+	<session-config>
+		<session-timeout>80</session-timeout>
+	</session-config>
+	<error-page>
+		<exception-type>java.lang.NullPointerException</exception-type>
+		<location>/session-expired.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/session-expired.jsp</location>
+	</error-page>
+</web-app>

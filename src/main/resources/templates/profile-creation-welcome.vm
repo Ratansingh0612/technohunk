@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+<title>Profile Creation</title>
+<style>
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<br/>
+<p style="width: 70%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+Hello $consultantsVO.name,<br/><br/>
+<b>You are most welcome in  ${companyName} online technical assessment and your profile has been created successfully:-</b><br/>
+</p>	
+
+
+<p style="width: 70%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+You can access <b style="color:blue;">$websiteUrl</b> using below credential.<br/>
+username  : $consultantsVO.userid<br/>
+password  : $consultantsVO.password
+ </p>
+<p style="width: 70%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+In case of any question and query , please feel free to reach us.
+</p>
+Thanks & Regards,<br/>
+<b>${companyName}</b>
+<hr style="width:250px;" align="left"/>
+Mobile : $companyNumber<br/>
+Email  : <b>$companyEmail</b><br/>
+
+ <img src="cid:image" style="margin-top: -50px;"/> 
+<!-- <img src="images/welcome.png" style="margin-top: -50px;"/>-->
+</body>
+</html>

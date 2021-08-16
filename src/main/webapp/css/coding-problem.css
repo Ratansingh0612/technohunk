@@ -1,0 +1,116 @@
+ .scrollcoll {
+    padding: 2%;
+    width: 100%;
+    background-color: #e7eeef2b;
+    color: #454C5F;
+    font-size: 16px;
+    line-height: 20px;
+    border-left: 5px solid #1b7175;
+    margin: 2%;
+    box-shadow: 0 0.125rem 0.625rem 0 rgba(0,0,0,0.2);
+    float: left;
+}
+
+.ptextarea {
+    padding: .5%;
+    width: 100%;
+    background-color: #e7eeef2b;
+    color: #454C5F;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border-left: 5px solid #48e244;
+    border-right: 5px solid #f44336;
+    box-shadow: 0 0.125rem 0.625rem 0 rgba(0,0,0,0.2);
+    float: left;
+}
+
+.ptestsummary {
+    padding: 1%;
+    width: 90%;
+    background-color: #e7eeef2b;
+    color: #454C5F;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border-left: 5px solid #c2bcf9;
+    border-right: 5px solid red;
+    box-shadow: 0 0.125rem 0.625rem 0 rgba(0,0,0,0.2);
+    float: left;
+}
+
+.probscrollcoll {
+    padding: 2%;
+    width: 100%;
+    background-color: #e7eeef2b;
+    color: #454C5F;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border-left: 5px solid #c2bcf9;
+    margin: 2%;
+    box-shadow: 0 0.125rem 0.625rem 0 rgba(0,0,0,0.2);
+    float: left;
+}
+ .subscrollcoll {
+    padding: 2%;
+    width: 100%;
+    background-color: #e7eeef2b;
+    color: #454C5F;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border-left: 5px solid #8bc34a;
+    margin: 2%;
+    box-shadow: 0 0.125rem 0.625rem 0 rgba(0,0,0,0.2);
+    float: left;
+}
+
+ .breadscrumscrollcoll {
+    padding: 1%;
+    width: 100%;
+    background-color: #e7eeef2b;
+    color: #454C5F;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight:bold;
+    border-left: 5px solid #c2bcf9;
+    margin: 1%;
+    box-shadow: 0 0.125rem 0.625rem 0 rgba(0,0,0,0.2);
+    float: left;
+}
+
+input[type=radio]{
+  display:none;
+}
+
+input[type=radio] + label:after{
+  content: '';
+  display:inline-block;
+  border-radius: 8px;
+  width: 12px;
+  height:12px;
+  background:white;
+  color:blue;
+  border: 1px solid black;
+  line-height: 11px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+input[type=radio]:checked + label:after{
+  color: red;
+   background:#b65efe;
+}
+    </style>
+   
+  <style type="text/css" media="screen">
+    #javacode {
+    border-style: solid;
+    border-width: 1px;
+    border-color:#009688;
+    height: 500px;
+    }
+    
+    
+    

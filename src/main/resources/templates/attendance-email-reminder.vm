@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+<title>Regarding attendance email reminder</title>
+<style>
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<br/>
+<p style="width: 70%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+Hello $teacherNotFilledAttForm.salutation  $teacherNotFilledAttForm.facultyName,<br/><br/>
+<b>You have not filled your attendance so for following classes:-</b><br/>
+</p>	
+
+<table border="1" style="width: 70%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+		<tr style="background-color: #1e2a7b;color:white;">
+			<td>SNO</td>
+			<td>Emp Id</td>
+			<td>Class</td>
+			<td>Subject</td>
+			<td>Subject Type</td>
+			<td>Period</td>
+		</tr>
+		
+		#foreach( $teacher in $teacherNotFilledAttFormsList )
+		<tr>
+			<td>$foreach.count.</td>
+			<td>$teacher.employeeId</td>
+			<td>$teacher.branchSemSec</td>
+				<td>$teacher.subjectName</td>
+				<td>$teacher.subjectType</td>
+				<td>$teacher.dayPeriods</td>
+		</tr>
+		#end
+</table>
+
+<p style="width: 70%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+Kindly fill it today by 4:30 PM.<br/><br/>
+if you have already filled it , please ignore this email.
+<br/><br/>
+Thanks & Regards,<br/>
+<b>ssssssssssssssss Admin</b>
+<br/>
+<img src="cid:image"/>
+</p>
+</body>
+</html>

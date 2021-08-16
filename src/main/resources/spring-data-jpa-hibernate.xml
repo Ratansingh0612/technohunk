@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+ xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+ xmlns:jee="http://www.springframework.org/schema/jee"
+ xmlns:jpa="http://www.springframework.org/schema/data/jpa" 
+ xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+ 
+ 
+<jpa:repositories base-package="com.techquiz.codings.dao" />
+ 
+ <beans:bean id="entityManagerFactory"
+  class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+  <beans:property name="dataSource" ref="dataSource" />
+  
+ 	 <beans:property name="packagesToScan">
+ 	 	<beans:list>
+ 	 			<beans:value>com.synergisitic.it.model</beans:value>
+ 	 			<beans:value>com.techquiz.trainer.dao.entity</beans:value>
+ 	 			<beans:value>com.techquiz.programys.common.dao.entity</beans:value>
+ 	 			<beans:value>com.techquiz.info.jdbc.dao.entity</beans:value>
+ 	 			<beans:value>com.techquiz.control.panel.dao.entity</beans:value>
+ 	 				<beans:value>com.techquiz.codings.dao.entity</beans:value>
+ 	 	</beans:list>
+     </beans:property>      
+  		      
+  <beans:property name="jpaVendorAdapter">
+   <beans:bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+    <beans:property name="generateDdl" value="true" />
+    <beans:property name="databasePlatform" value="org.hibernate.dialect.MySQLDialect" />
+   </beans:bean>
+  </beans:property>
+ </beans:bean>
+ 
+ 
+ <jee:jndi-lookup id="dataSource" jndi-name="jdbc/javaTechDataSource-ds"/>	
+  
+  <!-- 
+   <beans:bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<beans:property name="url" value="jdbc:mysql://localhost:3306/techquiz" />
+		<beans:property name="username" value="root" />
+		<beans:property name="password" value="root" />
+	</beans:bean>	
+ -->
+</beans:beans>

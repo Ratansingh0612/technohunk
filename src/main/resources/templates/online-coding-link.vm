@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+<title>Regarding online test link</title>
+<style>
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<p style="width: 70%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+Hello  $username,
+<br/><br/>
+Below is your coding problem details : - 
+<br/>
+Tech Name : <b>$techName</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Coding problem : <b>$codingTitle</b>
+</p>
+<hr style="width: 70%" align="left"/>
+<p style="width: 70%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+<b>Please click on below link to  start  your  online coding problem exercise:-</b><br/>
+</p>	
+
+<table border="1" style="width: 70%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+		<tr style="background-color: #1e2a7b;color:white;">
+			<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				<td>&nbsp;</td>
+		</tr>
+		
+		<tr>
+			<td colspan="6">$onlinetestlink</td>
+		</tr>
+</table>
+<p style="width: 70%;font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans';font-size: 16px;font-style: normal;	font-variant: normal;font-weight: 500;line-height: 26.4px;">
+Kindly do not refresh the page during the coding exercise.<br/><br/>
+You can use this link only once for register email id.
+<br/><br/>
+Thanks & Regards,<br/>
+<b>JavaHunk Tech Test Admin</b>
+<br/>
+<img src="cid:image"/>
+</p>
+</body>
+</html>

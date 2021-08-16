@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<persistence version="2.0"
+		xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+		<persistence-unit name="onlineexamds"
+			transaction-type="RESOURCE_LOCAL">
+			 <provider>org.hibernate.ejb.HibernatePersistence</provider>
+	    	<non-jta-data-source>java:comp/env/jdbc/javaTechDataSource-ds</non-jta-data-source>
+			<class>com.synergisitic.it.model.Answers</class>
+			<class>com.synergisitic.it.model.AssignedQuestionAnswers</class>
+			<class>com.synergisitic.it.model.AvailableTest</class>
+			<class>com.synergisitic.it.model.Category</class>
+			<class>com.synergisitic.it.model.StudentLoginEntity</class>
+			<class>com.techquiz.trainer.dao.entity.ConsultantsEntity</class>
+			<class>com.techquiz.trainer.dao.entity.ConsultantScreeningInterviewEntity</class>
+			<class>com.techquiz.programys.common.dao.entity.BatchEntity</class>
+			<class>com.techquiz.programys.common.dao.entity.TopicEntity</class>
+			<class>com.synergisitic.it.model.TechnologyEntity</class>
+			<class>com.techquiz.programys.common.dao.entity.CourseEntity</class>
+			<class>com.techquiz.trainer.dao.entity.CourseContentsEntity</class>
+			<class>com.techquiz.trainer.dao.entity.TrainingSessionsDetailEntity</class>
+			<class>com.techquiz.trainer.dao.entity.ErrorLogEntity</class>
+			<class>com.techquiz.info.jdbc.dao.entity.QuestionsBankEntity</class>
+			<class>com.techquiz.trainer.dao.entity.InterviewQuestionsAnswerEntity</class>
+			<class>com.synergisitic.it.model.GuestUserEntity</class>
+			<class>com.synergisitic.it.model.AvailableGuestTest</class>
+			<class>com.techquiz.codings.dao.entity.CodingProblemsEntity</class>
+		
+			<properties>
+				<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+				<property name="hibernate.hbm2ddl.auto" value="update" />
+				<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+				<property name="hibernate.connection.username" value="root" />
+				<property name="hibernate.connection.password" value="root" />
+				<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/techquiz" />
+				<property name="hibernate.show_sql" value="false" />
+			</properties>
+		</persistence-unit>
+	</persistence>
+	<!-- sssssssssssssss -->
+     

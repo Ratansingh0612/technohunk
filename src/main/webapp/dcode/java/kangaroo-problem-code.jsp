@@ -1,0 +1,30 @@
+ <script type="text/javascript">
+var defaultCode="//Plese write code here";
+	defaultCode=defaultCode+"\nimport java.util.*;";
+	defaultCode=defaultCode+"\n";
+	defaultCode=defaultCode+"\n	public class Main {";
+	defaultCode=defaultCode+"\n";
+	defaultCode=defaultCode+"\n	    private static String landOnSameLocation(int x1, int v1, int x2, int v2){";
+	defaultCode=defaultCode+"\n	         //Write your code here";
+	defaultCode=defaultCode+"\n	         return \"YES\";";
+	defaultCode=defaultCode+"\n	    }          ";
+	defaultCode=defaultCode+"\n	      ";
+	defaultCode=defaultCode+"\n	    public static void main(String[] args) throws Exception {";
+	defaultCode=defaultCode+"\n	            // Your code here!";
+	defaultCode=defaultCode+"\n	            Scanner in = new Scanner(System.in);";
+	defaultCode=defaultCode+"\n	            String line=in.nextLine();";
+	defaultCode=defaultCode+"\n	            String[] numsstring=line.split(\"[ ]+\");";
+	defaultCode=defaultCode+"\n	            int len=numsstring.length;";
+	defaultCode=defaultCode+"\n	            if(len<4) return;";
+	defaultCode=defaultCode+"\n	            int x1=Integer.parseInt(numsstring[0]);";
+	defaultCode=defaultCode+"\n	            int v1=Integer.parseInt(numsstring[1]);";
+	defaultCode=defaultCode+"\n	            int x2=Integer.parseInt(numsstring[2]);";
+	defaultCode=defaultCode+"\n	            int v2=Integer.parseInt(numsstring[3]);";
+	defaultCode=defaultCode+"\n	            String result=landOnSameLocation(x1,v1,x2,v2);";
+	defaultCode=defaultCode+"\n	            System.out.println(result);";
+	defaultCode=defaultCode+"\n	       ";
+	defaultCode=defaultCode+"\n	      }";
+	defaultCode=defaultCode+"\n	}";
+	editor.setValue(defaultCode);
+	editor.getSelection().clearSelection();
+</script>	

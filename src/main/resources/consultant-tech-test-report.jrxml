@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Coffee" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="net.sf.jasperreports.print.create.bookmarks" value="true"/>
+	<style name="Title" fontName="SansSerif" fontSize="24" isBold="true"/>
+	<style name="SubTitle" forecolor="#736343" fontName="SansSerif" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="SansSerif" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="SansSerif" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	
+	 	<field name="id" class="java.lang.Integer"/>
+		<field name="name" class="java.lang.String"/>
+		<field name="loginid" class="java.lang.String"/>
+		<field name="score" class="java.lang.String"/>
+		<field name="techTestStatus" class="java.lang.String"/>
+     <field name="mainHeading" class="java.lang.String"/>
+	<field name="groupName" class="java.lang.String"/>
+	<field name="trainerName" class="java.lang.String"/>
+	<field name="dot" class="java.lang.String"/>
+	<field name="consultantNo" class="java.lang.String"/>
+	<field name="techName" class="java.lang.String"/>
+	<field name="testName" class="java.lang.String"/>
+	<field name="avgScore" class="java.lang.String"/>
+	<field name="leftImage" class="java.lang.String"/>
+	<field name="rightImage" class="java.lang.String"/>
+
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="114" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="-10" width="140" height="90"/>
+				<imageExpression><![CDATA["students.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="Title" x="141" y="0" width="271" height="40"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" isItalic="false"/>
+				</textElement>
+					<textFieldExpression><![CDATA[$F{mainHeading}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="SubTitle" x="141" y="46" width="296" height="22" forecolor="black"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+			<textFieldExpression><![CDATA["Group : "+$F{groupName}+" , Trainer Name : "+$F{trainerName}]]></textFieldExpression>
+			</textField>
+				<textField>
+				<reportElement style="SubTitle" x="141" y="66" width="296" height="22" forecolor="black"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DOT : "+$F{dot}+" , Average %Score : "+$F{avgScore}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="470" y="0" width="80" height="64"/>
+				<imageExpression><![CDATA["bar.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="17">
+			<textField>
+				<reportElement mode="Transparent" x="0" y="-9" width="550" height="19" forecolor="#121210"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{consultantNo}+"      Tech Name : "+$F{techName}+"      Test Name : "+$F{testName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" mode="Opaque" x="0" y="0" width="50" height="15" forecolor="#EBEBF2" backcolor="#0066FF">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5abbea02-119a-4f92-9fa9-1c9e4414b924"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#0D0B0B"/>
+				</box>
+				<textElement>
+						<font size="12"/>
+				</textElement>
+				<text><![CDATA[Sno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" mode="Opaque" x="50" y="0" width="110" height="15" forecolor="#EBEBF2" backcolor="#0066FF">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="62e051eb-ca9f-4dad-83be-82610d7764f5"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#0D0B0B"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[ Consultant Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" mode="Opaque" x="160" y="0" width="250" height="15" forecolor="#EBEBF2" backcolor="#0066FF">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3899d39-e658-455a-981c-b0c24393442e"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#0D0B0B"/>
+				</box>
+				<textElement>
+						<font size="12"/>
+				</textElement>
+				<text><![CDATA[  Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" mode="Opaque" x="410" y="0" width="90" height="15" forecolor="#EBEBF2" backcolor="#0066FF">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e11ffaf-f7e5-49b0-b6d2-3ac2e55497c2"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#0D0B0B"/>
+				</box>
+				<textElement>
+						<font size="12"  isBold="true"/>
+				</textElement>
+				<text><![CDATA[  Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" mode="Opaque" x="500" y="0" width="55" height="15" forecolor="#EBEBF2" backcolor="#0066FF">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ca23a81d-40d9-4842-bcb2-4b25554532fc"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#0D0B0B"/>
+				</box>
+				<textElement>
+				<font size="12"  isBold="true"/>
+				</textElement>
+				<text><![CDATA[  Score%]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="15"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" mode="Opaque" x="0" y="0" width="50" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FCFCF5">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5abbea02-119a-4f92-9fa9-1c9e4414b924"/>
+					</reportElement>
+					<box padding="5">
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#0F0B0B"/>
+					</box>
+					<textElement textAlignment="Left">
+							<font fontName="SansSerif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Integer"><![CDATA[$F{id}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" mode="Opaque" x="50" y="0" width="110" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FCFCF5">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="62e051eb-ca9f-4dad-83be-82610d7764f5"/>
+					</reportElement>
+					<box padding="5">
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#0F0B0B"/>
+					</box>
+					<textElement textAlignment="Left">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{loginid}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" mode="Opaque" x="160" y="0" width="250" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FCFCF5">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3899d39-e658-455a-981c-b0c24393442e"/>
+					</reportElement>
+					<box padding="5">
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#0F0B0B"/>
+					</box>
+					<textElement textAlignment="Left">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" mode="Opaque" x="410" y="0" width="90" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FCFCF5">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e11ffaf-f7e5-49b0-b6d2-3ac2e55497c2"/>
+					</reportElement>
+					<box padding="5">
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#0F0B0B"/>
+					</box>
+					<textElement textAlignment="Left">
+							<font fontName="SansSerif" size="10" isBold="false"/>
+					</textElement>
+						<textFieldExpression><![CDATA[$F{techTestStatus}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" mode="Opaque" x="500" y="0" width="55" height="15" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FCFCF5">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ca23a81d-40d9-4842-bcb2-4b25554532fc"/>
+					</reportElement>
+					<box padding="5">
+						<pen lineWidth="1.0" lineStyle="Solid" lineColor="#0F0B0B"/>
+					</box>
+					<textElement textAlignment="Left">
+						<font fontName="SansSerif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{score}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement positionType="FixRelativeToBottom" x="0" y="14" width="555" height="1"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="yellow"/>
+					</graphicElement>
+				</line>
+			</frame>
+		</band>
+	</detail>
+	
+	<pageFooter>
+		<band height="36">
+			<textField>
+				<reportElement mode="Opaque" x="340" y="20" width="175" height="13" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="520" y="20" width="35" height="13" backcolor="#FFFFFF"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="-2" y="20" width="342" height="13" forecolor="#121210"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["@Copyright www.techquiz.com"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
